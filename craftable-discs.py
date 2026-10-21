@@ -56,6 +56,8 @@ write_json(OUTPUT_DIR / "pack.mcmeta", {
     }
 })
 
+print(f"Created raw datapack directory: {OUTPUT_DIR.resolve()}")
+
 for disc in DISCS:
     item_id = f"minecraft:music_disc_{disc}"
     recipe_id = f"{NAMESPACE}:duplicate_{disc}"
@@ -108,6 +110,8 @@ for disc in DISCS:
         f"advancement revoke @s only {advancement_id}\n"
     ), encoding="utf-8")
 
+print(f"Generated {len(DISCS)} recipes, advancements, and functions")
+
 with zipfile.ZipFile(OUTPUT_ZIP, "w", zipfile.ZIP_DEFLATED) as pack:
     for path in sorted(OUTPUT_DIR.rglob("*")):
         if path.is_file():
@@ -117,7 +121,3 @@ with zipfile.ZipFile(OUTPUT_ZIP, "w", zipfile.ZIP_DEFLATED) as pack:
             )
 
 print(f"Created ZIP: {OUTPUT_ZIP.resolve()}")
-print(f"Created raw datapack directory: {OUTPUT_DIR.resolve()}")
-print(f"Generated recipes: {len(DISCS)}")
-print(f"Generated advancements: {len(DISCS)}")
-print(f"Generated functions: {len(DISCS)}")
