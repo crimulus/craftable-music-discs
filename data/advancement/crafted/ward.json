@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "crafted_disc": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "craftable_music_discs:duplicate_ward"
+      }
+    }
+  },
+  "rewards": {
+    "function": "craftable_music_discs:duplicate/ward"
+  }
+}

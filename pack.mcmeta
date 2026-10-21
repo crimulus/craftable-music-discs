@@ -1,0 +1,13 @@
+{
+  "pack": {
+    "description": "Duplicate any music disc with an anvil, diamond, and gilded blackstone.",
+    "min_format": [
+      121,
+      0
+    ],
+    "max_format": [
+      121,
+      0
+    ]
+  }
+}

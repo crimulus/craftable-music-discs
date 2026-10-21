@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    " DB",
+    " G "
+  ],
+  "key": {
+    "A": "minecraft:anvil",
+    "D": "minecraft:diamond",
+    "B": "minecraft:music_disc_cat",
+    "G": "minecraft:gilded_blackstone"
+  },
+  "result": {
+    "id": "minecraft:music_disc_cat",
+    "count": 1
+  }
+}
